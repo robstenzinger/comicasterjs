@@ -1,21 +1,18 @@
-The MIT License (MIT)
-
 Copyright (c) 2014 Rob Stenzinger
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ComicasterJS license:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+	CODE - MIT-LICENSE.txt
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Comic example license:
+
+	COMIC EXAMPLE - CC BY-NC-SA 3.0 LICENSE.txt
+
+This project uses other open source projects as well, each with their own respective license:
+
+	- [RevealJS](https://github.com/hakimel/reveal.js) for the primary structure, general slide deck paging behavior, and more.
+	- [PEP](https://github.com/briangonzalez/jquery.pep.js) for the draggable page scrolling.
+	- [Hammer](http://eightmedia.github.io/hammer.js/) for touch interface gestures.
+	- [Mousewheel](https://github.com/brandonaaron/jquery-mousewheel) for page scrolling.
+	- [Cookie](https://github.com/carhartl/jquery-cookie) to remember the furthest page.
+	- [FontAwesome](http://fontawesome.io/) for icons.

@@ -1,0 +1,594 @@
+/* comicaster.css, use along side one of the revealJS css themes */
+
+@import url(http://fonts.googleapis.com/css?family=Shojumaru);
+
+@font-face {
+  font-family: 'Shojumaru';
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b; }
+
+#footer-tray{
+  font-family: 'Shojumaru', cursive!important;
+  z-index:1000;
+  position:absolute;
+  left:10px;
+  bottom:10px;
+  font-size:12px;
+  color:#000;
+  opacity:0.5;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
+.reveal {
+  font-size: 36px;
+  font-weight: 200;
+  color: #eeeeee; }
+
+::selection {
+  color: white;
+  background: #ff5e99;
+  text-shadow: none; }
+
+.comic-thumb{
+  height: 4em;
+}
+
+.comic-thumb-selected{
+  border: solid;
+  border-color: #fff;
+  border-width: 1px;
+  margin: 0px;
+}
+
+.comic-thumb-page-selected{
+  border: solid;
+  border-color: #000!important;
+  border-width: 5px!important;
+  border-radius: 3px;
+  margin: 0px;
+}
+
+
+.comic-thumb-page{
+  margin: 3px;
+  display: inline-block;
+  background: #fff;
+  border-color: #fff;
+  border-width: 3px;
+  cursor: pointer;
+}
+
+#menu-thumbs{
+  margin-top:15px;
+  margin-bottom:15px;
+  cursor: pointer;
+}
+
+.comic{
+  cursor: pointer;
+}
+
+/*
+
+buttons
+
+*/
+
+button{
+  color:#fff;
+  padding: 10px;
+  margin-top: 2px;
+  border-radius: 10px;
+  border: solid;
+  font-family: 'Shojumaru', cursive!important;
+  font-size: 1.5em;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/*
+
+modals
+
+*/
+
+.semantic-content{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity: 0;
+  display: none;
+  z-index: 9999;
+  font-family: 'Shojumaru', cursive!important;
+}
+
+#javascript-required{
+  display:block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.semantic-content .modal-content {
+  max-height: inherit;
+  border-bottom: none;
+  padding: 15px 1.2em;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.modal-content{
+  font-family: 'Shojumaru', cursive!important;
+}
+
+.semantic-content .modal-inner{
+  position: absolute;
+  z-index: 20;
+  margin-left: inherit;
+  overflow-x: hidden;
+  border-radius: 1em;
+  background: #fff;
+  padding: 2em;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.semantic-content .modal-close:after {
+  content: '\00d7';
+  position: absolute;
+  left: inherit;
+  z-index: 20;
+  margin-left: 285px;
+  background: #fff;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+/*
+
+modal-continue
+
+*/
+
+#menu-continue .modal-inner{
+  left: 10%;
+  top:  30%;
+  width: 80%;
+  height: 30%;
+  background-color:#43484C;
+  color:#fff;
+  font-family: sans-serif;
+}
+
+#menu-continue .modal-close:after {
+  right: 11%;
+  top:9%;
+}
+
+/*
+
+modal-menu
+
+*/
+
+#menu-actions .modal-inner{
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color:#43484C;
+  color:#fff;
+  font-family: sans-serif;
+}
+
+#menu-actions .modal-close:after {
+  right: 11%;
+  top:9%;
+}
+
+/*
+
+modal-help
+
+*/
+
+#menu-hint .modal-inner{
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color:#43484C;
+  color:#fff;
+  font-family: sans-serif;
+}
+
+#menu-hint .modal-close:after {
+  right: 11%;
+  top:9%;
+}
+
+/*
+
+responsive adjustments based on viewport width
+
+*/
+@media screen and (max-width: 900px){
+  .modal-inner{
+    width: 70%!important;
+  }
+  h1{
+    font-size: 1.3em!important;
+    margin:0!important;
+  }
+  h2{
+    font-size: 0.9em!important;
+    margin:0!important;
+  }
+  h3{
+    font-size: 0.7em!important;
+  }
+  h4{
+    font-size: 0.6em!important;
+  }
+  h5{
+    font-size: 0.5em!important;
+  }
+  h6{
+    font-size: 0.3em!important;
+  }
+
+  .menu-action{
+    font-size: 0.7em!important;
+    margin:0!important;
+  }
+
+  .menu-social-group {
+    padding: 1px!important;
+    margin: 1px!important;
+    margin-top: 1px!important;
+  }
+  .menu-social-action {
+    font-size: 1.5em!important;
+    padding: 1px!important;
+    margin: 1px!important;
+    margin-top: 1px!important;
+  }
+
+  .menu-social-group-label {
+    padding-bottom: 0px!important;
+  }
+
+  .comic-thumb{
+    height: 2em;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .semantic-content .modal-content {
+    max-height: inherit;
+    border-bottom: none;
+    padding: 15px 1.2em;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .modal-inner{
+    width: 60%!important;
+  }
+  button{
+    padding:0!important;
+    margin:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    font-size: 0.7em!important;
+  }
+  button .fa{
+    font-size: 1.5em!important;
+  }
+
+  h1{
+    font-size: 1.3em!important;
+    margin:0!important;
+  }
+  h2{
+    font-size: 0.9em!important;
+    margin:0!important;
+  }
+  h3{
+    font-size: 0.7em!important;
+  }
+  h4{
+    font-size: 0.6em!important;
+  }
+  h5{
+    font-size: 0.5em!important;
+  }
+  h6{
+    font-size: 0.3em!important;
+  }
+
+  p{
+    font-size: 0.3em!important;
+    margin:0!important;
+  }
+  .menu-action{
+    font-size: 0.3em!important;
+    margin:0!important;
+  }
+  .modal-close{
+    font-size: 2em!important;
+  }
+
+  .menu-social-group {
+    padding: 1px!important;
+    margin: 1px!important;
+    margin-top: 1px!important;
+  }
+  .menu-social-action {
+    font-size: 1em!important;
+    padding: 1px!important;
+    margin: 1px!important;
+    margin-top: 1px!important;
+  }
+
+  .menu-social-group-label {
+    padding-bottom: 0px!important;
+  }
+
+  .comic-thumb{
+    height: 1em;
+  }
+
+}
+
+/*
+base style settings
+*/
+.comic-container{
+  overflow: visible!important;
+  white-space: nowrap;
+  width:100%;
+}
+
+.zoom1{
+  transform: scaleX(1) scaleY(1);
+  -webkit-transform: scaleX(1) scaleY(1);
+}
+.zoom2{
+  -webkit-transform: scaleX(2) scaleY(2);
+  transform: scaleX(2) scaleY(2);
+}
+.zoom3{
+  -webkit-transform: scaleX(3) scaleY(3);
+  transform: scaleX(3) scaleY(3);
+}
+.zoom4{
+  -webkit-transform: scaleX(4) scaleY(4);
+  transform: scaleX(4) scaleY(4);
+}
+
+.present{
+  overflow: visible!important;
+}
+
+#menu-actions{
+  text-align: center;
+  color: #fff;
+  font-family: 'Shojumaru', cursive!important;
+}
+
+#menu-continue{
+  text-align: center;
+  color: #fff;
+  font-family: 'Shojumaru', cursive!important;
+}
+
+#menu-hint{
+  color: #fff;
+  font-family: 'Shojumaru', cursive!important;
+}
+
+.menu-action{
+  text-decoration: none;
+  color: #fff!important;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #333;
+  padding:5px!important;
+  margin:3px!important;
+  margin-top:5px!important;
+  font-family: 'Shojumaru', cursive!important;
+}
+
+.menu-social-group{
+  border-radius: 10px;
+  background-color: #333;
+  padding:5px!important;
+  margin:3px!important;
+  margin-top:5px!important;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 15px!important;
+}
+
+.menu-social-group-label{
+  vertical-align: middle;
+  padding-bottom: 8px;
+  display: inline-block;
+  font-family: 'Shojumaru', cursive!important;
+}
+
+.menu-social-action{
+  text-decoration: none;
+  color: #fff!important;
+  font-size: 30px;
+  padding:5px;
+  margin:3px;
+  margin-top:5px;
+  font-family: FontAwesome!important;
+}
+
+.fragment img{
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 100px;
+  background-color:transparent;
+}
+
+.comicui{
+  position: absolute;
+  display: block;
+  font-family: FontAwesome!important;
+  left: 99%;
+  top: 12px;
+  color:#fff;
+  opacity:0.5;
+}
+
+h1,h2,h3,h4,h5,h6{
+  white-space: pre-line;
+  font-family: 'Shojumaru', cursive!important;
+}
+h1{
+  font-size: 2.5em!important;
+}
+h2{
+  font-size: 1.5em!important;
+}
+h3{
+  font-size: 1.0em!important;
+}
+h4{
+  font-size: 0.7em!important;
+}
+h5{
+  font-size: 0.5em!important;
+}
+h6{
+  font-size: 0.3em!important;
+}
+
+.navigate-up, .navigate-down{
+  display:none;
+}
+
+.button-nav{
+  position: absolute;
+  z-index: 40;
+  font-size: 80px;
+  color:#000;
+  opacity:0.5;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+  cursor: pointer;
+}
+#button-prev{
+  top: 50%;
+  left: 5px;
+}
+#button-next{
+  top: 50%;
+  right: 5px;
+}
+#button-menu{
+  top: 10px;
+  right: 10px;
+  font-size: 2em!important;
+}
+
+#button-zoom{
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5em!important;
+}
+
+.button-zoom-1{
+  font-size: 1.5em!important;
+}
+.button-zoom-2{
+  font-size: 2em!important;
+}
+.button-zoom-3{
+  font-size: 2.5em!important;
+}
+.button-zoom-4{
+  font-size: 3em!important;
+}
+
+.modal-close{
+  cursor: pointer;
+}
+
+.semantic-content .modal-close:after {
+  font-family: FontAwesome!important;
+  content: none;
+}
+
+.semantic-content .modal-close {
+  top: 0%;
+  right: 11.5%;
+  font-family: FontAwesome!important;
+  color: #000!important;
+  opacity:0.5;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+  position: absolute;
+  z-index: 20;
+  margin-left: 285px;
+  background: none;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 4em;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+.page0,
+.page1,
+.page2,
+.page3,
+.page4,
+.page5,
+.page6,
+.page7,
+.page8,
+.page9,
+.page10,
+.page11,
+.page12,
+.page13,
+.page14,
+.page15,
+.page16,
+.page17,
+.page18,
+.page19,
+.page20,
+.page21,
+.page22,
+.page23,
+.page24,
+.page25,
+.page26,
+.page27,
+.page28,
+.page29,
+.page30,
+.page31,
+.page32{
+  margin:3px;
+}
