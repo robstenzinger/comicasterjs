@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- META DATA ABOUT THE COMIC -->
+		<title>Art Geek Zoo - The Way of Sound</title>
+		<meta name="description" content="music fantasy adventure">
+		<meta name="author" content="Rob Stenzinger">
+
+		<!-- ICON AND VIEWPORT SETTINGS -->
+		<link href="images/favicon.ico" rel="shortcut icon">
+		<link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- STYLES and FONTS -->
+		<link rel="stylesheet" href="js/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="css/comicaster.css" id="theme">
+		<!-- font awesome for icons -->
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+		<script src="js/lib/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!-- slide deck container - a REVEAL JS deck -->
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide, each slide can contain one or two comic page images -->
+
+			<!-- comic pages container -->
+			<div class="slides">
+
+				<!-- each "section" is a slide to place one or two comic pages -->
+
+
+				<!-- ///// COMIC PAGES BEGIN ///// -->
+
+				<!--
+
+				NOTE:
+
+				To add comic pages, add a 'section' block inside the 'slides' block:
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="YOUR_IMAGE_HERE.png"/>
+					</div>
+				</section>
+
+				Point the 'src=' attribute of the image to your comic image.
+
+				To have two comic images on one slide, add a second 'img' tag:
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="YOUR_IMAGE_HERE.png"/>
+						<img class="comic" src="YOUR_IMAGE_HERE_2.png"/>
+					</div>
+				</section>
+
+				-->
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/agzcover.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/1.jpg"/>
+						<img class="comic" src="images/2.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/3.jpg"/>
+						<img class="comic" src="images/4.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/5.jpg"/>
+						<img class="comic" src="images/6.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/7.jpg"/>
+						<img class="comic" src="images/8.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/9.jpg"/>
+						<img class="comic" src="images/10.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/11.jpg"/>
+						<img class="comic" src="images/12.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/13.jpg"/>
+						<img class="comic" src="images/14.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/15.jpg"/>
+						<img class="comic" src="images/16.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/17.jpg"/>
+						<img class="comic" src="images/18.jpg"/>
+					</div>
+				</section>
+
+				<section>
+					<div class="comic-container">
+						<img class="comic" src="images/19.jpg"/>
+						<img class="comic" src="images/20.jpg"/>
+					</div>
+				</section>
+
+				<!-- NOTE:
+
+				Not every slide in the deck needs to be a comic page.
+
+				For example, the 'section' block below is a
+				closing menu/to-be-continued page.
+
+				-->
+
+				<section>
+					<h1>TO BE CONTINUED</h1>
+
+					<div id="menu-jump">
+
+					<a href="#" class="menu-action" onclick="showMenu();return false;">menu</a>
+
+					<a href="#" class="menu-action" onclick="exitComic(); return false;">exit</a>
+					</div>
+
+					<div id="menu-share">
+						<span class="menu-social-group">
+							<strong class="menu-social-group-label">SHARE</strong>
+							<a href="#" target="_blank" class="fa fa-twitter-square menu-social-action sharevia-twitter"></a>
+							<a href="#" target="_blank" class="fa fa-facebook-square menu-social-action sharevia-facebook"></a>
+							<a href="#" target="_blank" class="fa fa-google-plus-square menu-social-action sharevia-googleplus"></a>
+						</span>
+					</div>
+				</section>
+
+				<!-- ///// COMIC PAGES END ///// -->
+
+			</div>
+			<!-- end comic pages container -->
+
+		</div>
+		<!-- end slide deck container -->
+
+
+		<!-- ///// NAVIGATION, MESSAGES, MAIN USER INTERFACE ELEMENTS ///// -->
+
+		<!-- PRIMARY NAVIGATION -->
+
+		<!-- previous page button -->
+		<div id="button-prev" class="button-nav" onclick="Reveal.prev();"><i class="fa fa-caret-left"></i></div>
+
+		<!-- menu button -->
+		<div id="button-menu" class="button-nav" onclick="toggleMenu();"><i class="fa fa-bars"></i></div>
+
+		<!-- next page button -->
+		<div id="button-next" class="button-nav" onclick="Reveal.next();"><i class="fa fa-caret-right"></i></div>
+
+		<!-- zoom button -->
+		<div id="button-zoom" class="button-nav" onclick="handleDoubleTap();"><i class="fa fa-search-plus button-zoom-1"></i></div>
+
+
+		<!--///// POPUP DIALOGS /////-->
+
+
+		<!-- MAIN MENU -->
+		<nav class="semantic-content modal" id="menu-actions">
+			<div class="modal-inner modal">
+				<div class="modal-content modal">
+					<h1>Art Geek Zoo</h1>
+					<h2>Polytechnica</h2>
+					<p>Where the story begins</p>
+
+					<!-- thumbnail menu gets created in here -->
+					<div id="menu-thumbs">
+					</div>
+					<!-- end thumbnail menu -->
+
+					<!-- main menu buttons -->
+					<div id="menu-jump">
+
+						<!-- jump to first page -->
+						<a href="javascript:return false;" class="menu-action" onclick="Reveal.slide(0);hideMenu();return false;">first</a>
+
+						<!-- jump to last page -->
+						<a href="javascript:return false;" class="menu-action" onclick="gotoLastComicPage();">last</a>
+
+						<!-- exit the comic -->
+						<a href="#" class="menu-action" onclick="exitComic(); return false;">exit</a>
+
+						<!-- show the help dialog -->
+						<a href="javascript:return false;" class="menu-action" onclick="showHint();">help</a>
+					</div> <!-- end menu buttons -->
+
+					<!-- buttons to share this comic -->
+					<div id="menu-share">
+						<span class="menu-social-group">
+
+							<strong class="menu-social-group-label">SHARE</strong>
+
+							<!-- twitter -->
+							<a href="#" target="_blank" class="fa fa-twitter-square menu-social-action sharevia-twitter"></a>
+
+							<!-- facebook -->
+							<a href="#" target="_blank" class="fa fa-facebook-square menu-social-action sharevia-facebook"></a>
+
+							<!-- google plus -->
+							<a href="#" target="_blank" class="fa fa-google-plus-square menu-social-action sharevia-googleplus"></a>
+						</span>
+					</div> <!-- end share buttons -->
+				<!-- close the modal  -->
+				</div>
+			</div>
+			<a href="javascript:hideModal('#menu-actions')" class="modal-close" title="Close this modal" data-dismiss="modal"><i class="fa fa-times-circle-o"></i></a>
+		</nav> <!-- end main menu -->
+
+		<!-- help menu -->
+		<nav class="semantic-content modal" id="menu-hint">
+			<div class="modal-inner modal">
+				<div class="modal-content modal">
+					<h1>Help and Tips</h1>
+					<h2>To explore and read this comic:</h2>
+					<div>
+						Tap the arrows on the edge to page forward and back.
+					</div>
+					<hr/>
+					<div>
+						Double tap to zoom in to the page.
+					</div>
+					<hr/>
+					<div>
+						Press and drag to explore the current page.
+					</div>
+					<hr/>
+					<div>
+						Press and hold to reveal the comic menu.
+					</div>
+					<hr/>
+					<div>
+						On a computer or laptop: press F for full screen, ESCAPE to show/hide the menu, and use the ARROW keys to navigate.
+					</div>
+					<hr/>
+					<div>
+						<button onclick="hideHint()">ok</button>
+					</div>
+				<!-- close the modal  -->
+				</div>
+			</div>
+			<a href="javascript:hideModal('#menu-hint')" class="modal-close" title="Close this modal" data-dismiss="modal"><i class="fa fa-times-circle-o"></i></a>
+		</nav> <!-- end help menu -->
+
+		<!-- continue menu -->
+		<nav class="semantic-content modal" id="menu-continue">
+			<div class="modal-inner modal">
+				<div class="modal-content modal">
+					<h2>welcome back!</h2>
+					<div>
+						<button onclick="loadLatestPositionSlideURL();hideContinue();">
+							continue <i class="fa fa-arrow-circle-right"></i>
+						</button>
+						<button onclick="hideContinue();saveCurrentSlideURL();repositionPage();">
+							start here <i class="fa fa-arrow-circle-down"></i>
+						</button>
+					</div>
+				<!-- close the modal  -->
+				</div>
+			</div>
+		</nav> <!-- end continue menu -->
+
+		<!-- message box to remind this comic requires JS -->
+		<noscript>
+			<nav class="semantic-content modal" id="javascript-required">
+				<div class="modal-inner modal">
+					<div class="modal-content modal">
+						<h2>Please enable JavaScript</h2>
+						<h3>This comic viewer requires JavaScript</h3>
+					</div>
+				</div>
+			</nav>
+		</noscript>
+
+		<!-- alert messages -->
+		<nav class="semantic-content modal" id="message-alert">
+			<div class="modal-inner modal">
+				<div class="modal-content modal">
+					<div id="message"></div>
+				<!-- close the modal  -->
+				</div>
+			</div>
+		</nav> <!-- end alert message -->
+
+		<!-- footer tray -->
+		<div id="footer-tray">
+			&copy; 2014 Rob Stenzinger
+		</div>
+
+		<!--///// SCRIPTS /////-->
+
+		<script>
+			//
+			// COMIC CONFIGURATION SETTINGS
+			//
+
+			// URL where you'd like the reader to go when they click the exit button
+			var exitComicURL = "http://agz.me";
+
+			// helps name the cookie that tracks the furthest page read
+			var comicName = "AGZCHAPTER1";
+
+			// used as link sharing text when the reader clicks one of the sharing links
+			var comicShareText = "Polytechnica! Chapter 1 of Art Geek Zoo: The Way of Sound";
+		</script>
+
+		<!-- revealjs scripts -->
+		<script src="js/reveal.js/lib/js/head.min.js"></script>
+		<script src="js/reveal.js/js/reveal.min.js"></script>
+
+		<!-- comicasterjs dependencies -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/lib/jquery.pep.js"></script>
+		<script src="js/lib/jquery.hammer-full.min.js"></script>
+		<script src="js/lib/jquery.cookie.js"></script>
+		<script src="js/lib/jquery.mousewheel.min.js"></script>
+		<script src="js/comicaster.js"></script>
+
+		<!-- google analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-29368319-1', 'agz.me');
+		  ga('send', 'pageview');
+		</script>
+
+	</body>
+</html>
